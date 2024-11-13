@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.btn {
+  transition: all 150ms ease-out;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.btn.btn-primary {
+  background-color: #f90;
+  color: white;
+}
+.btn.btn-primary:hover {
+  background-color: #cc7a00;
+}
+.btn.btn-primary:active {
+  background-color: #b36b00;
+}
+.btn.btn-secondary {
+  background-color: #eee;
+}
+.btn.btn-secondary:hover {
+  background-color: #d5d5d5;
+}
+.btn.btn-secondary:active {
+  background-color: #c8c8c8;
+}
+
+header .title {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(51, 51, 51, 0.1333333333);
+  font-size: 50px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Calculator {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator-box {
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: rgba(50, 50, 93, 0.2509803922) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3019607843) 0px 1px 3px -1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.display {
+  background-color: #555;
+  color: white;
+  font-size: 45px;
+  text-align: right;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.card {
-  padding: 2em;
+.CalculatorButtons {
+  display: flex;
+  flex-direction: column;
 }
 
-.read-the-docs {
-  color: #888;
+.CalculatorButtons,
+.button-row {
+  gap: 15px;
+}
+
+.button-row {
+  display: flex;
+  width: 100%;
+}
+
+.calculator-button {
+  flex: 1 0 0px;
+  aspect-ratio: 1/1;
+  background: #ddd;
+  font-size: 20px;
+}
+.calculator-button:hover {
+  background: #ccc;
+}
+.calculator-button:active {
+  background: #bbb;
 }

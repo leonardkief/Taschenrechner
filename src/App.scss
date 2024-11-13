@@ -1,0 +1,107 @@
+.btn {
+    transition: all 150ms ease-out;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    $primary-btn-color: #f90;
+    &.btn-primary {
+        background-color: $primary-btn-color;
+        color: white;
+
+        &:hover {
+            background-color: darken($color: $primary-btn-color, $amount: 10%);
+        }
+
+        &:active {
+            background-color: darken($color: $primary-btn-color, $amount: 15%);
+        }
+    }
+
+    $secondary-btn-color: #eee;
+    &.btn-secondary {
+        background-color: $secondary-btn-color;
+
+        &:hover {
+            background-color: darken(
+                $color: $secondary-btn-color,
+                $amount: 10%
+            );
+        }
+
+        &:active {
+            background-color: darken(
+                $color: $secondary-btn-color,
+                $amount: 15%
+            );
+        }
+    }
+}
+
+header .title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #3332;
+    font-size: 50px;
+}
+
+.Calculator {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-box {
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    // box-shadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
+    box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+}
+
+.display {
+    background-color: #555;
+    color: white;
+    font-size: 45px;
+    text-align: right;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.CalculatorButtons {
+    display: flex;
+    flex-direction: column;
+}
+.CalculatorButtons,
+.button-row {
+    gap: 15px;
+}
+
+.button-row {
+    display: flex;
+    width: 100%;
+}
+
+.calculator-button {
+    flex: 1 0 0px;
+    aspect-ratio: 1/1;
+    background: #ddd;
+    font-size: 20px;
+
+    &:hover {
+        background: #ccc;
+    }
+
+    &:active {
+        background: #bbb;
+    }
+}
